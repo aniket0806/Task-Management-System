@@ -12,21 +12,17 @@ const port = process.env.PORT || 8000;
 
 const app = express();
 
-//middleware
-// app.use(
-//   cors({
-//     origin: process.env.CLIENT_URL,
-//     credentials:true,
-//   })
-// );
+middleware
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL,
+    credentials:true,
+  })
+);
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://task-management-system-snowy-kappa.vercel.app"); // No '/login'
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.header("Access-Control-Allow-Credentials", "true");
-  next();
-});
+
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
