@@ -15,8 +15,8 @@ const app = express();
 // middleware
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
-    credentials: true,
+    origin:"https://task-management-system-red.vercel.app/login",
+    // credentials: true,
   })
 );
 app.use(express.json());
