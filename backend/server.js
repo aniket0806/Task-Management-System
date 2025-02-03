@@ -11,12 +11,12 @@ dotenv.config();
 const port = process.env.PORT || 8000;
 
 const app = express();
-
+const cors = require("cors")
 // middleware
 app.use(
   cors({
-    origin:"https://task-management-system-red.vercel.app/login",
-    // credentials: true,
+    origin:process.env.CLIENT_URL,
+    credentials:true,
   })
 );
 app.use(express.json());
