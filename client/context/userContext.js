@@ -9,7 +9,7 @@ const UserContext = React.createContext();
 axios.defaults.withCredentials = true;
 
 export const UserContextProvider = ({ children }) => {
-  const serverUrl = "https://task-management-system-afq4.onrender.com";
+  const serverUrl = "https://task-management-system-ma2c.vercel.app/";
 
   const router = useRouter();
 
